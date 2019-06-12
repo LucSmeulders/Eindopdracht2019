@@ -2,13 +2,16 @@
   require_once 'blogs.php';
   require_once 'function.php';
   session_start();
+  // old variablen blanco waarde geven
   $oblog_id = "";
   $odatum = "";
   $otitel = "";
   $obericht = "";
 
   if(isset($_GET['blog_id'])){
+    // via GET het blog_id ophalen
     $oblog_id = $_GET['blog_id'];
+    // verbinding maken met tabel en data ophalen adhv blog_id
     $blog = new blogs();
     $data = $blog->getDataById('blog', $oblog_id);
     $odatum = $data['datum'];
@@ -18,11 +21,11 @@
 
   if($_SERVER['REQUEST_METHOD']=="POST")
   {
-    if(isset($_POST['datum']) && isset($_POST['titel']) && isset($_POST['bericht'])){
-        $blog_id = $_POST['blog_id'];
-        $datum = $_POST['datum'];
-        $titel = $_POST['titel'];
-        $bericht = $_POST['bericht'];
+    if(isset($_POST['blog_id']) && isset($_POST['datum']) && isset($_POST['titel']) && isset($_POST['bericht'])){
+        $blog_id = empty($_POST['blog_id']) ? 0 : $_POST['blog_id'];
+        $datum = empty($_POST['datum']) ? "" : $_POST['datum'];
+        $titel = empty($_POST['titel']) ? "" : $_POST['titel'];
+        $bericht = empty($_POST['bericht']) ? "" : $_POST['bericht'];
 
         $blog = new blogs();
         $blog->updateData('blog', $blog_id, $datum, $titel, $bericht);
@@ -57,7 +60,6 @@
                 </div>
                   <label for="titel">Titel</label>
                   <input type="text" class="form-control" id="titel" aria-describedby="emailHelp" name="titel" value="<?php echo $otitel; ?>" placeholder="Vul een titel in">
-                  <small id="emailHelp" class="form-text text-muted">Uw gegevens worden nergens anders voor gebruikt dan registratie.</small>
                 </div>
                 <div class="form-group">
                   <label for="bericht">Bericht</label>

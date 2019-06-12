@@ -4,7 +4,7 @@
   session_start();
 
   require_once 'blogs.php';
-  // Opvragen van alle evenementen in database
+  // Opvragen van alle evenementen in tabel
   $blog = new blogs();
   $blogData = $blog->getAllData('blog');
 ?>

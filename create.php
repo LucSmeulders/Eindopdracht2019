@@ -2,13 +2,18 @@
   require_once 'blogs.php';
   require_once 'function.php';
 
+  // POST uitgevoerd ?
   if($_SERVER['REQUEST_METHOD']=="POST")
   {
+    // Verwachte POST-vars gekend ?
+    // datum MOET ingevoerd zijn
     if(isset($_POST['datum']) && !empty($_POST['datum']) && isset($_POST['titel']) && isset($_POST['bericht'])){
+        // Data in variabelen steken, blanco's opvangen door default tekst
         $datum = $_POST['datum'];
         $titel = empty($_POST['titel']) ? "geen titel" : $_POST['titel'];
         $bericht = empty($_POST['bericht']) ? "geen bericht" : $_POST['bericht'];
 
+        // verbinding met tabel maken en nieuwe data inserten
         $blog = new blogs();
         $blog->insertData('blog', $datum, $titel, $bericht);
     }
