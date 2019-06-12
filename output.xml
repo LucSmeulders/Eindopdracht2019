@@ -13,9 +13,9 @@
    <height></height>
   </image>
   <item>
-   <title>test54161562</title>
+   <title>test</title>
    <pubDate>2019-06-13</pubDate>
-   <description>dit is een test</description>
+   <description>dit is een testje</description>
    <author></author>
    <comments></comments>
    <category></category>
@@ -23,9 +23,19 @@
    <enclosure url="http://www.myRssFeeds.be/podcast.mp4" length="19741854" type="video/mpeg"/>
   </item>
   <item>
-   <title>a</title>
+   <title>abc</title>
    <pubDate>2019-06-21</pubDate>
-   <description>b</description>
+   <description>xyz</description>
+   <author></author>
+   <comments></comments>
+   <category></category>
+   <author></author>
+   <enclosure url="http://www.myRssFeeds.be/podcast.mp4" length="19741854" type="video/mpeg"/>
+  </item>
+  <item>
+   <title>geen titel</title>
+   <pubDate>2019-06-28</pubDate>
+   <description>geen bericht</description>
    <author></author>
    <comments></comments>
    <category></category>

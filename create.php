@@ -4,17 +4,15 @@
 
   if($_SERVER['REQUEST_METHOD']=="POST")
   {
-    if(isset($_POST['datum']) && isset($_POST['titel']) && isset($_POST['bericht'])){
+    if(isset($_POST['datum']) && !empty($_POST['datum']) && isset($_POST['titel']) && isset($_POST['bericht'])){
         $datum = $_POST['datum'];
-        $titel = $_POST['titel'];
-        $bericht = $_POST['bericht'];
+        $titel = empty($_POST['titel']) ? "geen titel" : $_POST['titel'];
+        $bericht = empty($_POST['bericht']) ? "geen bericht" : $_POST['bericht'];
 
         $blog = new blogs();
         $blog->insertData('blog', $datum, $titel, $bericht);
-        //insertData($table = null, $datum=null, $titel=null, $bericht = null)
-        relocator('index.php');
-
     }
+    relocator('index.php');
 }
 
 ?>
@@ -44,7 +42,6 @@
                 </div>
                   <label for="titel">Titel</label>
                   <input type="text" class="form-control" id="titel" aria-describedby="emailHelp" name="titel" placeholder="Vul een titel in">
-                  <small id="emailHelp" class="form-text text-muted">Uw gegevens worden nergens anders voor gebruikt dan registratie.</small>
                 </div>
                 <div class="form-group">
                   <label for="bericht">Bericht</label>

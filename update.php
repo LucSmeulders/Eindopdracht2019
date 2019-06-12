@@ -47,7 +47,7 @@
        <div class="container">
          <div class="row">
            <div class="col-8 offset-2">
-             <h1 class="text-center mt-2 pt-5 pb-2">Nieuw RSS</h1>
+             <h1 class="text-center mt-2 pt-5 pb-2">Wijzigen RSS</h1>
              <div class="row">
                <form action="update.php" method="POST" class="mb-3 pl-2 pr-2">
                  <div class="form-group">
