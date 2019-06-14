@@ -8,7 +8,7 @@ class blogs extends db
     
     // opvragen alle blogs
     public function getAllData($table = null){
-        $a = "SELECT * FROM ".$table ;
+        $a = "SELECT * FROM ".$table." ORDER BY 2";
         $stmt = $this->conn->prepare($a); 
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);

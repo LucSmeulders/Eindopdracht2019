@@ -13,7 +13,7 @@
    <height></height>
   </image>
   <item>
-   <title>test</title>
+   <title>Test</title>
    <pubDate>2019-06-13</pubDate>
    <description>dit is een testje</description>
    <author></author>
@@ -36,6 +36,16 @@
    <title>geen titel</title>
    <pubDate>2019-06-28</pubDate>
    <description>geen bericht</description>
+   <author></author>
+   <comments></comments>
+   <category></category>
+   <author></author>
+   <enclosure url="http://www.myRssFeeds.be/podcast.mp4" length="19741854" type="video/mpeg"/>
+  </item>
+  <item>
+   <title>Dit is de titel van de RSS feed</title>
+   <pubDate>2019-06-29</pubDate>
+   <description>En dit is het bericht...</description>
    <author></author>
    <comments></comments>
    <category></category>

@@ -74,7 +74,6 @@
 
               <?php endwhile; ?>
             <?php endif; ?>
-          </tr>
           </tbody>
         </table>
       </div>
